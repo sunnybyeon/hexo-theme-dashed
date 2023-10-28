@@ -1,0 +1,36 @@
+<main>
+    <header>
+        <h1>
+            <% if (page.link) { %><a href="<%- url_for(page.link) %>"><% } %>
+                <%= page.title || "Untitled" %>
+            <% if (page.link) { %></a><% } %>
+        </h1>
+        <div>
+            <time><%= date(page.date) %></time>
+            <div class="post-categories">
+                <% post_categories(page.categories).forEach((categoryTree) => { %>
+                    <span class="category-tree">
+                        <% categoryTree.forEach((category) => { %>
+                            <span class="separator">/</span>
+                            <a href="<%= url_for(category.path) %>"><%= category.name %></a>
+                        <% }) %>
+                    </span>
+                <% }) %>
+            </div>
+            <div class="post-tags">
+                <% page.tags.forEach((tag) => { %>
+                    <span class="tag">
+                        <span class="separator">#</span>
+                        <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
+                    </span>
+                <% }) %>
+            </div>
+        </div>
+    </header>
+    <%- page.content %>
+    <div class="gallery">
+        <% page.photos.forEach((photo) => { %>
+            <img src="<%- url_for(photo) %>" />
+        <% }) %>
+    </div>
+</main>

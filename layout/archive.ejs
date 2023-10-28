@@ -1,0 +1,19 @@
+<% let currentYear = page.posts.first().date.year() %>
+<main>
+    <h1>Archives</h1>
+    <ul class="theme-list posts-list">
+    <h2><%= currentYear %></h2>
+    <% page.posts.forEach((post) => { %>
+        <% if (post.date.year() !== currentYear) { %>
+            </ul>
+            <% currentYear = post.date.year() %>
+            <h2><%= currentYear %></h2>
+            <ul class="theme-list posts-list">
+        <% } %>
+            <%- partial(
+                "partials/post-li",
+                { post, pageCategories: [], depth: 0 }
+            ) %>
+    <% }) %>
+    </ul>
+</main>

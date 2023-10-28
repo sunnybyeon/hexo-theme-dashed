@@ -1,0 +1,141 @@
+@import "variables.styl"
+
+background = hsl(0, 0%, 97%)
+dark-background = hsl(0, 0%, 93%)
+
+/* colors from https://github.com/highlightjs/highlight.js/blob/3e628edbe34d2ffb9166ff365f614f56621597be/src/styles/github.css */
+foreground = #24292e
+red = #d73a49
+dark-red = #b31d28
+light-red = #ffeef0
+magenta = #6f42c1
+cyan = #005cc5
+blue = #032f62
+orange = #e36209
+grey = #6a737d
+green = #22863a
+light-green = #f0fff4
+yellow = #735c0f
+
+
+table.highlight, td, th
+    border: none
+
+figure.highlight
+    margin: 0.5rem 0
+    overflow: auto
+    font-family: monospace-font
+    font-size: 0.8rem
+    background-color: background
+
+    > table
+        border-collapse: collapse
+        
+        &, td, th
+            border: none
+    
+    figcaption
+        padding: 0.65rem 0.65rem 0.7rem
+        font-weight: 500
+        background-color: dark-background
+        color: grey
+
+        *
+            margin: 0.5ch
+    
+    td.gutter
+        position: sticky
+        left: 0
+        padding: 0.75rem 1rem
+        background-color: dark-background
+        color: grey
+    td.code
+        padding: 0 0.75rem
+    
+    pre
+        margin: 0
+
+/* modified version of https://github.com/highlightjs/highlight.js/blob/3e628edbe34d2ffb9166ff365f614f56621597be/src/styles/github.css */
+
+/*!
+  Theme: GitHub
+  Description: Light theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-light
+  Current colors taken from GitHub's CSS
+*/
+
+td.code pre,
+.hljs {
+    color: var(--foreground);
+}
+
+td.code ., .hljs-
+    &doctag, &keyword, &meta &keyword,
+    &template-tag, &template-variable, &type, &variable.language_
+        /* prettylights-syntax-keyword */
+        color: red
+
+    &title, &title.class_, &title.class_.inherited__, &title.function_
+    /* prettylights-syntax-entity */
+        color: magenta
+
+    &attr, &attribute, &literal, &meta, &number, &operator,
+    &variable, &selector-attr, &selector-class, &selector-id
+        /* prettylights-syntax-constant */
+        color: cyan
+    
+    &regexp, &string, &meta .string
+        /* prettylights-syntax-string */
+        color: blue
+
+    &built_in, &symbol
+        /* prettylights-syntax-variable */
+        color: orange
+
+    &comment, &code, &formula
+        /* prettylights-syntax-comment */
+        color: grey
+    
+    &name, &quote, &selector-tag, &selector-pseudo
+        /* prettylights-syntax-entity-tag */
+        color: green
+
+    &subst
+        /* prettylights-syntax-storage-modifier-import */
+        color: foreground
+    
+    &section
+        /* prettylights-syntax-markup-heading */
+        color: cyan
+        font-weight: bold
+    
+    &bullet
+        /* prettylights-syntax-markup-list */
+        color: yellow
+    
+    &emphasis
+        /* prettylights-syntax-markup-italic */
+        color: foreground
+        font-style: italic
+
+    &strong
+        /* prettylights-syntax-markup-bold */
+        color: foreground
+        font-weight: bold
+    
+    &addition
+        /* prettylights-syntax-markup-inserted */
+        color: green
+        background-color: light-green
+    
+    &deletion
+        /* prettylights-syntax-markup-deleted */
+        color: dark-red
+        background-color: light-red
+    
+    &marked 
+        background-color: mark-color

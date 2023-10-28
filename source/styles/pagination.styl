@@ -1,0 +1,34 @@
+nav.pagination
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    margin: 1.5rem 0
+    color: light-color
+    font-size: 0.9rem
+
+    span
+        flex-basis: 50%
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+    span.prev
+        text-align: left;
+
+        a::before
+            content: "\00AB";
+            margin-right: 0.75ch;
+    span.next
+        text-align: right;
+
+        a::before
+            content: "\00BB";
+            margin-left: 0.75ch;
+            float: right;
+    
+    a
+        color: light-color
+        text-decoration: none
+        font-size: 0.9rem
+    a::before
+        position: relative;
+        top: -1.5px;

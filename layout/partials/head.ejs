@@ -1,0 +1,52 @@
+<% const blogTitle = locals.config.title || "Untitled" %>
+<% const title = is_home()
+    ? ""
+    : is_page() || is_post()
+    ? locals.page.title || "Untitled"
+    : is_archive()
+    ? "Archives"
+    : is_current("/posts")
+    ? "Posts"
+    : is_current("/" + locals.config.tag_dir)
+    ? "Tags"
+    : is_current("/" + locals.config.category_dir)
+    ? "Categories"
+    : "" %>
+<% const stylesheets = is_home()
+    ? ["index.css"]
+    : is_page()
+    ? ["page.css"]
+    : is_post()
+    ? ["post.css"]
+    : is_archive()
+    ? ["archive.css"]
+    : is_current("/posts")
+    ? ["posts.css"]
+    : is_current("/" + locals.config.category_dir)
+    ? ["categories.css"]
+    : [] %>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<% if (theme.favicon) { %>
+    <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>" />
+<% } %>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+/>
+<link
+    href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.2.1/index.min.css"
+    rel="stylesheet"
+/>
+
+<%- css("styles/main.css") %>
+<% stylesheets.forEach((stylesheet) => { %>
+    <%- css("styles/" + stylesheet) %>
+<% }) %>
+
+<title><%= title + (title ? " - " : "") + blogTitle %></title>

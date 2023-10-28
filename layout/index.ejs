@@ -1,0 +1,11 @@
+<main>
+    <% if (theme.cover) { %>
+    <img src="<%- url_for(theme.cover) -%>" />
+    <% } %>
+
+    <h1><%= config.title %></h1>
+
+    <ul class="theme-list">
+        <%- partial("partials/menu") %>
+    </ul>
+</main>

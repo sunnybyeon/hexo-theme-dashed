@@ -1,0 +1,13 @@
+<% for (const title in theme.menu) { %>
+    <li>
+        <a href="<%- url_for(theme.menu[title]) -%>"
+            ><span><%= title -%></span></a
+        >
+    </li>
+<% } %>
+<% if (Object.keys(theme.menu || {}).length === 0) { %>
+    <li><a href="<%- url_for("/posts") %>"><span>Posts</span></a></li>
+    <li><a href="<%- url_for("/tags") %>"><span>Tags</span></a></li>
+    <li><a href="<%- url_for("/categories") %>"><span>Categories</span></a></li>
+    <li><a href="<%- url_for("/archives") %>"><span>Archives</span></a></li>
+<% } %>

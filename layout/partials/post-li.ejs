@@ -1,0 +1,23 @@
+<li>
+    <span class="side-info">
+        <% if (depth > 0) { %>
+            <span class="category-tree">
+                <span class="separator">/</span>
+                <% this_category_tree(categories, post.categories, depth).forEach((category) => { %>
+                    <% if (category) { %>
+                        <a href="<%= url_for(category.path) %>"
+                            ><%= category.name %></a>
+                    <% } else { %>
+                        <%= config.default_category || "No Category" %>
+                    <% } %>
+                    <span class="separator">/</span>
+                <% }) %>
+            </span>
+        <% } else { %>
+            <%= date(post.date) %>
+        <% } %>
+    </span>
+    <a class="post-title" href="<%- url_for(post.path) %>"
+        ><span><%= post.title || "Untitled" %></span></a
+    >
+</li>

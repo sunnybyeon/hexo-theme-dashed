@@ -1,0 +1,22 @@
+@import "variables.styl"
+
+.theme-list
+    ul
+        list-style-type: none
+        padding-left: 1.5rem
+
+        li
+            padding-left: 0.5rem
+    details
+        summary::marker
+            font-weight: 900
+            font-family: monospace-font
+        &[open] summary::marker
+            content: "- "
+        &:not([open]) summary::marker
+            content: "+ "
+        summary 
+            a
+                display: inline-block
+                width: calc(100% - 2.2ch)
+

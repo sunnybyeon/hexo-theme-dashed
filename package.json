@@ -1,0 +1,28 @@
+{
+    "name": "hexo-theme-dashed",
+    "version": "1.0.0",
+    "description": "A simple theme for Hexo.",
+    "main": "layout/layout.ejs",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sunnybyeon/hexo-theme-dashed.git"
+    },
+    "bugs": {
+        "url": "https://github.com/sunnybyeon/hexo-theme-dashed/issues"
+    },
+    "homepage": "https://sunnybyeon.github.io/hexo-theme-dashed",
+    "keywords": [
+        "hexo",
+        "theme",
+        "dashed"
+    ],
+    "author": "Sunny Byeon",
+    "license": "MIT",
+    "dependencies": {
+        "hexo-pagination": "^3.0.0"
+    }
+}
+

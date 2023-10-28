@@ -1,0 +1,22 @@
+<% if ((page.prev || page.next) && !is_home()) { %>
+    <nav class="pagination">
+        <span class="prev">
+            <% if (page.prev || page.prev_link) { %>
+                <a href="<%- url_for(page.prev.path || page.prev_link) %>">
+                    <%= typeof page.prev === "number"
+                        ? `Page ${page.prev}`
+                        : (page.prev.title || "Untitled") %>
+                </a>
+            <% } %>
+        </span>
+        <span class="next">
+            <% if (page.next || page.next_link) { %>
+                <a href="<%- url_for(page.next.path || page.next_link) %>" >
+                    <%= typeof page.next === "number"
+                        ? `Page ${page.next}`
+                        : (page.next.title || "Untitled") %>
+                </a>
+            <% } %>
+        </span>
+    </nav>
+<% } %>

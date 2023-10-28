@@ -1,0 +1,11 @@
+<main>
+    <header>
+        <h1>
+            <% if (page.link) { %><a href="<%- page.link %>"><% } %>
+                <%= page.title || "Untitled" %>
+            <% if (page.link) { %></a><% } %>
+        </h1>
+        <div><time><%= page.date.format(config.date_format) %></time></div>
+    </header>
+    <%- page.content %>
+</main>

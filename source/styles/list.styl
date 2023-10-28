@@ -1,0 +1,36 @@
+@import "variables.styl"
+
+.theme-list
+    margin: 0
+    padding: 0
+    list-style: none
+    
+    li
+        margin: 0.25rem 0
+
+        a
+            color: foreground-color
+            position: relative
+            display: block
+            text-decoration: none
+
+            &::after
+                content: ""
+                border: 1px dashed light-color
+                position: absolute
+                bottom: 1ch
+                left: 0
+                width: calc(100% - 2px)
+                z-index: -1
+            span
+                background-color: white
+                padding-right: 0.5rem
+.posts-list
+    li
+        display: flex
+        gap: 0.5rem
+    span.side-info
+        color: light-color
+        flex-shrink: 0
+    a.post-title
+        flex-grow: 1

@@ -1,0 +1,11 @@
+<main>
+    <h1>Tags</h1>
+    <ul class="theme-list">
+        <% page.posts.forEach((tag) => { %>
+            <li>
+                <a href="<%- url_for(tag.path) %>"
+                    ><span><%= tag.name %></span></a>
+            </li>
+        <% }) %>
+    </ul>
+</main>

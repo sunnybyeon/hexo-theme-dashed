@@ -1,0 +1,102 @@
+@import "variables.styl"
+
+@import "header.styl"
+@import "list.styl"
+@import "category-and-tag.styl"
+@import "pagination.styl"
+@import "footer.styl"
+
+*
+    box-sizing: border-box
+    color: inherit
+    font-family: inherit
+    max-width: 100%
+html
+    width: 100dvw
+    height: 100dvh
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 30px 0
+    overflow: auto
+body
+    color: foreground-color
+    font-family: serif-font
+    margin: auto
+    padding: 0 25px
+    width: 550px
+    max-width: 100%
+    max-height: 100%
+    overflow: auto
+
+h1
+    margin: 1rem 0 0.5rem
+    font-size: 1.75rem
+main > header:first-child > h1
+    margin-top: 0
+a
+    color: link-color
+    text-decoration-color: link-underline-color
+    text-decoration-thickness: 2px
+    text-underline-position: under
+    position: relative
+blockquote 
+    margin: 0
+    padding: 0 1.2rem
+    border-style: solid
+    border-color: light-color
+    border-width: 0
+    border-left-width: 3.5px
+
+    footer
+        text-align: right
+
+        > *:first-child::before
+            content: "\2014"
+            margin-right: 0.75ch
+        
+        cite::before
+            content: ", "
+            margin-left: 0.2ch
+
+    &.pullquote
+        background-color: very-light-color
+        width: min(50%, 200px)
+
+        &.left
+            float: left
+            margin-right: 1rem
+
+        &.right
+            float: right
+            margin-left: 1rem
+            border-left-width: 0
+            border-right-width: 3.5px
+pre, code
+    overflow: auto
+kbd
+    background-color: very-light-color
+    padding: 0.4em 0.65rem
+    border-radius: 0.15rem
+    margin: 0.2rem calc(0.3rem + 2px) 0 0.3rem
+    font-size: 0.8rem
+    font-family: monospace-font
+    box-shadow: 1.5px 1.5px light-color
+    display: inline-block
+    position: relative
+    top: -1.5px
+mark
+    background-color: mark-color
+table
+    border-collapse: collapse
+    border: 1px soild foreground-color
+th
+    border-color: foreground-color
+
+    &, /td
+        border: 1px solid light-colro
+        padding: 0.5rem
+div.video-container
+    > iframe
+        width: 100%;
+        aspect-ratio: 16 / 9;

@@ -1,0 +1,8 @@
+<main>
+    <h1>Categories</h1>
+    <ul class="theme-list">
+        <% page.posts.forEach((root) => { %>
+            <%- list_child_categories(root) %>
+        <% }) %>
+    </ul>
+</main>

@@ -1,0 +1,11 @@
+<main>
+    <h1>Posts</h1>
+    <ul class="theme-list posts-list">
+        <% page.posts.forEach((post) => { %>
+            <%- partial(
+                "partials/post-li",
+                { post, categories: [], depth: theme.posts_category_depth || 1 }
+            ) %>
+        <% }) %>
+    </ul>
+</main>

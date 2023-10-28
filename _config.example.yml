@@ -1,0 +1,10 @@
+favicon: /favicon.svg
+cover: /cover.gif
+
+menu:
+    Posts: /posts
+    Tags: /tags
+    Categories: /categories
+    Archives: /archives
+
+posts_category_depth: 1
