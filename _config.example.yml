@@ -2,6 +2,12 @@ favicon: /favicon.svg
 cover: /cover.gif
 
 menu:
+    Page: /page
+    Posts: /posts
+    Tags: /tags
+    Categories: /categories
+    Archives: /archives
+header_menu:
     Posts: /posts
     Tags: /tags
     Categories: /categories

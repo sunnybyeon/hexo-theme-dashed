@@ -1,6 +1,6 @@
 {
     "name": "hexo-theme-dashed",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A simple theme for Hexo.",
     "main": "layout/layout.ejs",
     "scripts": {
@@ -25,4 +25,3 @@
         "hexo-pagination": "^3.0.0"
     }
 }
-

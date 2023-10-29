@@ -2,7 +2,17 @@
     <nav>
         <ul>
             <li><a href="<%- url_for("/") %>">Home</a></li>
-            <%- partial("menu") %>
+            <% if (theme.header_menu) { %>
+                <% for (const title in theme.header_menu) { %>
+                    <li>
+                        <a href="<%- url_for(theme.header_menu[title]) -%>"
+                            ><span><%= title -%></span></a
+                        >
+                    </li>
+                <% } %>
+            <% } else { %>
+                <%- partial("menu") %>
+            <% } %>
         </ul>
     </nav>
 </header>

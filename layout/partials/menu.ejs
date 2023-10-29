@@ -7,7 +7,7 @@
 <% } %>
 <% if (Object.keys(theme.menu || {}).length === 0) { %>
     <li><a href="<%- url_for("/posts") %>"><span>Posts</span></a></li>
-    <li><a href="<%- url_for("/tags") %>"><span>Tags</span></a></li>
-    <li><a href="<%- url_for("/categories") %>"><span>Categories</span></a></li>
-    <li><a href="<%- url_for("/archives") %>"><span>Archives</span></a></li>
+    <li><a href="<%- url_for(config.tag_dir) %>"><span>Tags</span></a></li>
+    <li><a href="<%- url_for(config.category_dir) %>"><span>Categories</span></a></li>
+    <li><a href="<%- url_for(config.archive_dir) %>"><span>Archives</span></a></li>
 <% } %>
