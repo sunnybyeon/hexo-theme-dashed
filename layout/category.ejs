@@ -1,6 +1,8 @@
+<% const categoryPath = config.category_dir.split("/").filter((path) => path) %>
+<% const paginationPath = config.pagination_dir.split("/").filter((path) => path) %>
 <% const categories =
-    page.path.split("/").slice(config.category_dir.split("/").length,
-    page.path.split("/").length - 1) %>
+    page.path.split("/").slice(categoryPath.length,
+    page.path.split("/").length - 1 - (page.current > 1 ? paginationPath.length + 1 : 0)) %>
 <main>
     <h1>
         <span class="category-tree">

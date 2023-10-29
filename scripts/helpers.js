@@ -15,7 +15,7 @@ hexo.extend.helper.register(
                 currentTree.length > i
                     ? categories.findOne({
                           parent: result[i - 1]._id,
-                          slug: currentTree[i],
+                          slug: currentTree.slice(0, i + 1).join("/"),
                       })
                     : categories.findOne({ parent: result[i - 1]._id })
             );
