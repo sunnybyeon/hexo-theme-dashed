@@ -1,10 +1,21 @@
-<% const blogTitle = locals.config.title || "Untitled" %>
+<% const categoryPath = config.category_dir.split("/").filter((path) => path) %>
+<% const paginationPath = config.pagination_dir.split("/").filter((path) => path) %>
+<% const categories =
+    page.path.split("/").slice(categoryPath.length,
+    page.path.split("/").length - 1 - (page.current > 1 ? paginationPath.length + 1 : 0)) %>
+
+<% const blogTitle = config.title || "Untitled" %>
 <% const title = is_home()
     ? ""
     : is_page() || is_post()
-    ? locals.page.title || "Untitled"
+    ? page.title || "Untitled"
     : is_archive()
     ? "Archives"
+    : is_category()
+    ? this_category_tree(categories, site.categories, categories.length)
+        .map((category) => category.name).join("/") + "/"
+    : is_tag()
+    ? "# " + page.tag
     : is_current("/posts")
     ? "Posts"
     : is_current("/" + locals.config.tag_dir)
