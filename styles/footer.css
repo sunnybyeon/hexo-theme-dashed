@@ -1,0 +1,16 @@
+footer {
+  color: light-color;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2px;
+}
+footer a {
+  color: light-color;
+  text-decoration-color: light-color;
+  text-decoration-thickness: 1px;
+  text-underline-position: auto;
+}
+footer p {
+  margin: 0;
+}

@@ -1,0 +1,21 @@
+.theme-list ul {
+  list-style-type: none;
+  padding-left: 1.5rem;
+}
+.theme-list ul li {
+  padding-left: 0.5rem;
+}
+.theme-list details summary::marker {
+  font-weight: 900;
+  font-family: "Cascadia Code", monospace;
+}
+.theme-list details[open] summary::marker {
+  content: "- ";
+}
+.theme-list details:not([open]) summary::marker {
+  content: "+ ";
+}
+.theme-list details summary a {
+  display: inline-block;
+  width: calc(100% - 2.2ch);
+}

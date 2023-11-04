@@ -1,0 +1,38 @@
+nav.pagination {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  color: light-color;
+  font-size: 0.9rem;
+}
+nav.pagination span {
+  flex-basis: 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+nav.pagination span.prev {
+  text-align: left;
+}
+nav.pagination span.prev a::before {
+  content: "\00AB";
+  margin-right: 0.75ch;
+}
+nav.pagination span.next {
+  text-align: right;
+}
+nav.pagination span.next a::before {
+  content: "\00BB";
+  margin-left: 0.75ch;
+  float: right;
+}
+nav.pagination a {
+  color: light-color;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+nav.pagination a::before {
+  position: relative;
+  top: -1.5px;
+}

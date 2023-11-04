@@ -1,0 +1,23 @@
+body > header {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid light-color;
+}
+body > header ul {
+  padding: 0;
+  margin: 0 0 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  overflow: auto;
+}
+body > header ul li {
+  with: min-content;
+}
+body > header ul li a {
+  text-decoration: none;
+  color: light-color;
+}

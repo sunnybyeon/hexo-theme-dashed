@@ -1,0 +1,10 @@
+body {
+  width: 450px;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.theme-list li a {
+  font-size: 1.1rem;
+}

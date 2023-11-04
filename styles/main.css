@@ -1,0 +1,247 @@
+body > header {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid #808080;
+}
+body > header ul {
+  padding: 0;
+  margin: 0 0 1rem;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  overflow: auto;
+}
+body > header ul li {
+  with: min-content;
+}
+body > header ul li a {
+  text-decoration: none;
+  color: #808080;
+}
+.theme-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.theme-list li {
+  margin: 0.25rem 0;
+}
+.theme-list li a {
+  color: #333;
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+.theme-list li a::after {
+  content: "";
+  border: 1px dashed #808080;
+  position: absolute;
+  bottom: 1ch;
+  left: 0;
+  width: calc(100% - 2px);
+  z-index: -1;
+}
+.theme-list li a span {
+  background-color: #fff;
+  padding-right: 0.5rem;
+}
+.posts-list li {
+  display: flex;
+  gap: 0.5rem;
+}
+.posts-list span.side-info {
+  color: #808080;
+  flex-shrink: 0;
+}
+.posts-list a.post-title {
+  flex-grow: 1;
+}
+span.category-tree {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.3ch;
+}
+span.category-tree a,
+span.tag a {
+  all: unset;
+}
+span.category-tree a:hover,
+span.tag a:hover {
+  cursor: pointer;
+}
+span.category-tree a::after,
+span.tag a::after {
+  display: none;
+}
+span.category-tree span.separator {
+  display: inline-block;
+  transform: rotate(-0.02turn);
+}
+nav.pagination {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  color: #808080;
+  font-size: 0.9rem;
+}
+nav.pagination span {
+  flex-basis: 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+nav.pagination span.prev {
+  text-align: left;
+}
+nav.pagination span.prev a::before {
+  content: "\00AB";
+  margin-right: 0.75ch;
+}
+nav.pagination span.next {
+  text-align: right;
+}
+nav.pagination span.next a::before {
+  content: "\00BB";
+  margin-left: 0.75ch;
+  float: right;
+}
+nav.pagination a {
+  color: #808080;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+nav.pagination a::before {
+  position: relative;
+  top: -1.5px;
+}
+footer {
+  color: #808080;
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2px;
+}
+footer a {
+  color: #808080;
+  text-decoration-color: #808080;
+  text-decoration-thickness: 1px;
+  text-underline-position: auto;
+}
+footer p {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+  color: inherit;
+  font-family: inherit;
+  max-width: 100%;
+}
+html {
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  overflow: auto;
+}
+body {
+  color: #333;
+  font-family: "PT Serif", "Times New Roman", "Noto Serif", serif;
+  margin: auto;
+  padding: 0 25px;
+  width: 550px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+h1 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.75rem;
+}
+main > header:first-child > h1 {
+  margin-top: 0;
+}
+a {
+  color: #4b5629;
+  text-decoration-color: #c4c9b6;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+  position: relative;
+}
+blockquote {
+  margin: 0;
+  padding: 0 1.2rem;
+  border-style: solid;
+  border-color: #808080;
+  border-width: 0;
+  border-left-width: 3.5px;
+}
+blockquote footer {
+  text-align: right;
+}
+blockquote footer > *:first-child::before {
+  content: "\2014";
+  margin-right: 0.75ch;
+}
+blockquote footer cite::before {
+  content: ", ";
+  margin-left: 0.2ch;
+}
+blockquote.pullquote {
+  background-color: #ededed;
+  width: 50%;
+}
+blockquote.pullquote.left {
+  float: left;
+  margin-right: 1rem;
+}
+blockquote.pullquote.right {
+  float: right;
+  margin-left: 1rem;
+  border-left-width: 0;
+  border-right-width: 3.5px;
+}
+pre,
+code {
+  overflow: auto;
+  font-family: monospace;
+  background-color: #ededed;
+  padding: 0.5ch 1ch;
+  border-radius: 0.65ch;
+}
+kbd {
+  background-color: #ededed;
+  padding: 0.4em 0.65rem;
+  border-radius: 0.15rem;
+  margin: 0.2rem calc(0.3rem + 2px) 0 0.3rem;
+  font-size: 0.8rem;
+  font-family: "Cascadia Code", monospace;
+  box-shadow: 1.5px 1.5px #808080;
+  display: inline-block;
+  position: relative;
+  top: -1.5px;
+}
+mark {
+  background-color: #f7edba;
+}
+table {
+  border-collapse: collapse;
+  border: 1px soild #333;
+}
+th {
+  border-color: #333;
+}
+th,
+td {
+  border: 1px solid light-colro;
+  padding: 0.5rem;
+}
+div.video-container > iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
