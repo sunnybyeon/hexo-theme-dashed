@@ -1,0 +1,4 @@
+[submodule "themes/dashed"]
+	path = themes/dashed
+	url = https://github.com/sunnybyeon/hexo-theme-dashed
+	branch = main

@@ -1,0 +1,15 @@
+favicon: /favicon.svg
+cover: /cover.svg
+
+menu:
+    About: /about
+    Posts: /posts
+    Tags: /tags
+    Categories: /categories
+    Archives: /archives
+
+header_menu:
+    Posts: /posts
+    Tags: /tags
+    Categories: /categories
+    Archives: /archives
