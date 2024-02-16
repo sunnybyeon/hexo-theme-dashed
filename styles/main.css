@@ -41,7 +41,7 @@ body > header ul li a {
   position: absolute;
   bottom: 1ch;
   left: 0;
-  width: calc(100% - 2px);
+  width: 100%;
   z-index: -1;
 }
 .theme-list li a span {
@@ -209,7 +209,7 @@ blockquote.pullquote.right {
 pre,
 code {
   overflow: auto;
-  font-family: monospace;
+  font-family: "Cascadia Code", monospace;
   background-color: #ededed;
   padding: 0.5ch 1ch;
   border-radius: 0.65ch;

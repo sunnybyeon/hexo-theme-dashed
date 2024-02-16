@@ -5,17 +5,21 @@
 .theme-list ul li {
   padding-left: 0.5rem;
 }
-.theme-list details summary::marker {
+.theme-list details summary::before {
+  font-size: 1.2rem;
   font-weight: 900;
   font-family: "Cascadia Code", monospace;
 }
-.theme-list details[open] summary::marker {
+.theme-list details[open] summary::before {
   content: "- ";
 }
-.theme-list details:not([open]) summary::marker {
+.theme-list details:not([open]) summary::before {
   content: "+ ";
 }
+.theme-list details summary {
+  display: flex;
+  gap: 0.75ch;
+}
 .theme-list details summary a {
-  display: inline-block;
-  width: calc(100% - 2.2ch);
+  flex-grow: 1;
 }
