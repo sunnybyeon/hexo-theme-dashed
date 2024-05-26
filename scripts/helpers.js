@@ -1,22 +1,26 @@
 hexo.extend.helper.register(
     "this_category_tree",
     (currentTree, categories, depth = 1) => {
+        const categoriesArrary = categories.toArray();
         const result = currentTree.length
             ? [
-                  categories.findOne({
-                      parent: undefined,
-                      slug: currentTree[0],
-                  }),
+                  categoriesArrary.find(
+                      (category) =>
+                          category.parent === undefined &&
+                          category.slug === currentTree[0]
+                  ),
               ]
             : [categories.findOne({ parent: undefined })];
         for (let i = 1; i < (depth < 1 ? 1 : depth); i++) {
             if (!result[i - 1]) break;
             result.push(
                 currentTree.length > i
-                    ? categories.findOne({
-                          parent: result[i - 1]._id,
-                          slug: currentTree.slice(0, i + 1).join("/"),
-                      })
+                    ? categoriesArrary.find(
+                          (category) =>
+                              category.parent === result[i - 1]._id &&
+                              category.slug ===
+                                  currentTree.slice(0, i + 1).join("/")
+                      )
                     : categories.findOne({ parent: result[i - 1]._id })
             );
         }
