@@ -38,7 +38,7 @@
 
 <title>Tag Plugins - Dashed</title>
 
-    <meta name="generator" content="Hexo 6.3.0"></head>
+    <meta name="generator" content="Hexo 7.1.1"></head>
     <body>
         <header>
     <nav>
@@ -132,10 +132,6 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line marked"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">&#x27;http&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">&#x27;127.0.0.1&#x27;</span>;</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">1337</span>;</span><br><span class="line"></span><br><span class="line">http.<span class="title function_">createServer</span>(<span class="function">(<span class="params">req, res</span>) =&gt;</span> &#123;</span><br><span class="line marked">res.<span class="title function_">writeHead</span>(<span class="number">200</span>, &#123; <span class="string">&#x27;Content-Type&#x27;</span>: <span class="string">&#x27;text/plain&#x27;</span> &#125;);</span><br><span class="line marked">res.<span class="title function_">end</span>(<span class="string">&#x27;Hello World\n&#x27;</span>);</span><br><span class="line">&#125;).<span class="title function_">listen</span>(port, hostname, <span class="function">() =&gt;</span> &#123;</span><br><span class="line marked"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Server running at http://<span class="subst">$&#123;hostname&#125;</span>:<span class="subst">$&#123;port&#125;</span>/`</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>Note: Theme’s style should support <code>.highlight.line.marked</code> (recommend to use the selection or current line color).</p>
-<h3 id="Gist"><a href="#Gist" class="headerlink" title="Gist"></a>Gist</h3><script src="//gist.github.com/996818.js"></script>
-
-<h3 id="jsFiddle"><a href="#jsFiddle" class="headerlink" title="jsFiddle"></a>jsFiddle</h3><iframe scrolling="no" width="100%" height="300" src="https://jsfiddle.net/ccWP7/embedded/js,resources,html,css,result/light" frameborder="0" loading="lazy" allowfullscreen></iframe>
-
 <h2 id="Pullquote"><a href="#Pullquote" class="headerlink" title="Pullquote"></a>Pullquote</h2><h3 id="Left"><a href="#Left" class="headerlink" title="Left"></a>Left</h3><blockquote class="pullquote left"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 </blockquote>
 
