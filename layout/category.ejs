@@ -6,10 +6,14 @@
 <main>
     <h1>
         <span class="category-tree">
-        <% this_category_tree(categories, site.categories, categories.length).forEach((category) => { %>
-            <span><%= category.name %></span>
-            <span class="separator">/</span>
-        <% }) %>
+            <% this_category_tree(categories, site.categories,
+            categories.length).forEach((category) => { %>
+                <%= category.name.split(" ").slice(0, -1).join(" ") %>
+                <span style="white-space: nowrap">
+                    <%= category.name.split(" ").pop() %>
+                    <span class="category-separator">/</span>
+                </span>
+                <% }) %>
         </span>
     </h1>
     <ul class="theme-list posts-list">

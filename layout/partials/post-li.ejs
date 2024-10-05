@@ -1,23 +1,32 @@
+<% const category_tree =
+    depth > 0 ? this_category_tree(categories, post.categories, depth)
+        .slice(theme.do_not_show_parent_category === false ? 0 : categories.length) : [] %>
+
 <li>
-    <span class="side-info">
-        <% if (depth > 0) { %>
-            <span class="category-tree">
-                <span class="separator">/</span>
-                <% this_category_tree(categories, post.categories, depth).forEach((category) => { %>
-                    <% if (category) { %>
-                        <a href="<%= url_for(category.path) %>"
-                            ><%= category.name %></a>
-                    <% } else { %>
-                        <%= config.default_category || "No Category" %>
-                    <% } %>
-                    <span class="separator">/</span>
-                <% }) %>
-            </span>
-        <% } else { %>
-            <%= date(post.date) %>
-        <% } %>
-    </span>
+    <% if ((depth > 0 && category_tree.length) || depth === 0) { %>
+        <span class="side-info">
+            <% if (depth > 0) { %>
+                <span class="category-tree">
+                    <% category_tree.forEach((category, index) => { %>
+                        <% if (theme.do_not_show_parent_category === false
+                                || categories.length === 0 || index) { %>
+                            <span class="category-separator">/</span>
+                        <% } %>
+                        <% if (category) { %>
+                            <a href="<%= url_for(category.path) %>"
+                                ><%= category.name %></a>
+                        <% } else { %>
+                            <%= config.default_category || "No Category" %>
+                        <% } %>
+                    <% }) %>
+                </span>
+                <span class="category-separator">/</span>
+            <% } else { %>
+                <%= date(post.date) %>
+            <% } %>
+        </span>
+    <% } %>
     <a class="post-title" href="<%- url_for(post.path) %>"
-        ><span><%= post.title || "Untitled" %></span></a
+        ><div><span><%= post.title || "Untitled" %></span></div></a
     >
 </li>

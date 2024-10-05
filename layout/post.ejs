@@ -11,7 +11,7 @@
                 <% post_categories(page.categories).forEach((categoryTree) => { %>
                     <span class="category-tree">
                         <% categoryTree.forEach((category) => { %>
-                            <span class="separator">/</span>
+                            <span class="category-separator">/</span>
                             <a href="<%= url_for(category.path) %>"><%= category.name %></a>
                         <% }) %>
                     </span>
@@ -20,7 +20,7 @@
             <div class="post-tags">
                 <% page.tags.forEach((tag) => { %>
                     <span class="tag">
-                        <span class="separator">#</span>
+                        <span class="category-separator">#</span>
                         <a href="<%= url_for(tag.path) %>"><%= tag.name %></a>
                     </span>
                 <% }) %>
