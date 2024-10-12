@@ -14,3 +14,4 @@ header_menu:
     Archives: /archives
 
 posts_category_depth: 1
+do_not_show_parent_category: true
