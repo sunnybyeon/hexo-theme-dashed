@@ -4,7 +4,7 @@
         <% page.posts.forEach((post) => { %>
             <%- partial(
                 "partials/post-li",
-                { post, categories: [], depth: 1 }
+                { post, categories: [], depth: theme.posts_category_depth || 1 }
             ) %>
         <% }) %>
     </ul>
