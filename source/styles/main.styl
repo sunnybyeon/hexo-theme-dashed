@@ -35,9 +35,8 @@ main > header:first-child > h1
 a
     color: link-color
     text-decoration-color: link-underline-color
-    text-decoration-thickness: 2px
-    text-underline-position: under
-    position: relative
+    text-decoration-thickness: 1.5px
+    text-underline-offset: 2.5px
 blockquote 
     margin: 0
     padding: 0 1.2rem
@@ -73,14 +72,18 @@ blockquote
 pre, code
     overflow: auto
     font-family: monospace-font
+    font-size: 0.9rem
     background-color: very-light-color
-    padding: 0.5ch 1ch
-    border-radius: 0.65ch
+    padding: 0.35ch 0.75ch
+    margin: 0.2rem 0
+    border-radius: 0.35ch
+    display: inline-block
+    vertical-align: middle
 kbd
     background-color: very-light-color
-    padding: 0.4em 0.65rem
+    padding: 0.3rem 0.65rem
     border-radius: 0.15rem
-    margin: 0.2rem calc(0.3rem + 2px) 0 0.3rem
+    margin: 0.2rem calc(0.3rem + 2px) 0.2rem 0.3rem
     font-size: 0.8rem
     font-family: monospace-font
     box-shadow: 1.5px 1.5px light-color
