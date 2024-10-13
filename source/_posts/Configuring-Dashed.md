@@ -58,3 +58,37 @@ The depth of which to display categories on the Posts page. Defaults to 1.
 ```YAML _config.dashed.yml
 posts_category_depth: 1
 ```
+
+## Do Not Show Common Parent Categories
+
+_Added in `v1.4.0`._
+
+Whether or not to show common parent categories when listing posts under the category. Defaults to `true`.
+
+```YAML _config.dashed.yml
+do_not_show_parent_category: true
+```
+
+<figure class="config-figure">
+    <div>
+        {% img /images/do_not_show_parent_category_true.png %}
+        {% img /images/do_not_show_parent_category_false.png %}
+    </div>
+    <figcaption>True <span style="color: grey;">vs</span> False</figcaption>
+</figure>
+<style>
+    .config-figure {
+        margin: 0;
+    }
+    .config-figure div {
+        display: flex;
+    }
+    .config-figure div img {
+        min-width: 0;
+    }
+    .config-figure figcaption {
+        font-size: 0.9rem;
+        text-align: center;
+        color: #4d4d4d;
+    }
+</style>

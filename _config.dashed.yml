@@ -13,3 +13,5 @@ header_menu:
     Tags: /tags
     Categories: /categories
     Archives: /archives
+
+do_not_show_parent_category: true
