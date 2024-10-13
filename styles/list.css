@@ -28,11 +28,28 @@
 .posts-list li {
   display: flex;
   gap: 0.5rem;
+  position: relative;
 }
-.posts-list span.side-info {
+.posts-list li span.side-info {
   color: #808080;
   flex-shrink: 0;
+  max-width: 50%;
+  display: flex;
 }
-.posts-list a.post-title {
+.posts-list li span.side-info span.category-tree {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.posts-list li span.side-info span.category-separator:last-child::before {
+  content: "\00a0";
+}
+.posts-list li a.post-title {
   flex-grow: 1;
+}
+.posts-list li a.post-title div {
+  display: block;
+  max-width: 80%;
 }

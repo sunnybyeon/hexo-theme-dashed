@@ -1,8 +1,3 @@
-span.category-tree {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.3ch;
-}
 span.category-tree a,
 span.tag a {
   all: unset;
@@ -15,7 +10,7 @@ span.category-tree a::after,
 span.tag a::after {
   display: none;
 }
-span.category-tree span.separator {
+span.category-separator {
   display: inline-block;
   transform: rotate(-0.02turn);
 }

@@ -3,7 +3,7 @@
   padding-left: 1.5rem;
 }
 .theme-list ul li {
-  padding-left: 0.5rem;
+  padding-left: 1rem;
 }
 .theme-list details summary::before {
   font-size: 1.2rem;
