@@ -4,24 +4,24 @@
     page.path.split("/").slice(categoryPath.length,
     page.path.split("/").length - 1 - (page.current > 1 ? paginationPath.length + 1 : 0)) %>
 
-<% const blogTitle = config.title || "Untitled" %>
+<% const blogTitle = config.title || __("titles.blogDefault") %>
 <% const title = is_home()
     ? ""
     : is_page() || is_post()
-    ? page.title || "Untitled"
+    ? page.title || __("titles.postDefault")
     : is_archive()
-    ? "Archives"
+    ? __("titles.archive")
     : is_category()
     ? this_category_tree(categories, site.categories, categories.length)
         .map((category) => category.name).join("/") + "/"
     : is_tag()
     ? "# " + page.tag
     : is_current("/posts")
-    ? "Posts"
+    ? __("titles.posts")
     : is_current("/" + locals.config.tag_dir)
-    ? "Tags"
+    ? __("titles.tags")
     : is_current("/" + locals.config.category_dir)
-    ? "Categories"
+    ? __("titles.categories")
     : "" %>
 <% const stylesheets = is_home()
     ? ["index.css"]
@@ -44,16 +44,12 @@
     <link rel="shortcut icon" href="<%- url_for(theme.favicon) %>" />
 <% } %>
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-    href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-    rel="stylesheet"
-/>
-<link
-    href="https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@4.2.1/index.min.css"
-    rel="stylesheet"
-/>
+<style>
+    <%- __("fonts.fontFace") %>
+    body {
+        font-family: <%- __("fonts.serif") %>;
+    }
+</style>
 
 <%- css("styles/main.css") %>
 <% stylesheets.forEach((stylesheet) => { %>

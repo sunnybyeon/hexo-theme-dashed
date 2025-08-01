@@ -1,7 +1,7 @@
 <header>
     <nav>
         <ul>
-            <li><a href="<%- url_for("/") %>">Home</a></li>
+            <li><a href="<%- url_for("/") %>"><%= __("titles.home") %></a></li>
             <% if (theme.header_menu) { %>
                 <% for (const title in theme.header_menu) { %>
                     <li>

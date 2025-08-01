@@ -4,8 +4,8 @@
             <% if (page.prev || page.prev_link) { %>
                 <a href="<%- url_for(page.prev.path || page.prev_link) %>">
                     <%= typeof page.prev === "number"
-                        ? `Page ${page.prev}`
-                        : (page.prev.title || "Untitled") %>
+                        ? `${__("page")} ${page.prev}`
+                        : (page.prev.title || __("titles.postDefault")) %>
                 </a>
             <% } %>
         </span>
@@ -13,8 +13,8 @@
             <% if (page.next || page.next_link) { %>
                 <a href="<%- url_for(page.next.path || page.next_link) %>" >
                     <%= typeof page.next === "number"
-                        ? `Page ${page.next}`
-                        : (page.next.title || "Untitled") %>
+                        ? `${__("page")} ${page.next}`
+                        : (page.next.title || __("titles.postDefault")) %>
                 </a>
             <% } %>
         </span>

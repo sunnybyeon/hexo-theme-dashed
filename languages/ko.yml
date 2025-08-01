@@ -1,0 +1,32 @@
+titles:
+    blogDefault: 무제
+    postDefault: 무제
+    archive: 기록
+    posts: 글
+    tags: 태그
+    categories: 카테고리
+    home: 홈
+    categoryDefault: 카테고리 없음
+
+footer:
+    poweredByHexo: <a href="https://hexo.io/">Hexo</a> 기반
+    themeBySunnybyeon: <a href="https://github.com/sunnybyeon">sunnybyeon</a> 제작 <a href="https://github.com/sunnybyeon/hexo-theme-dashed">테마</a>
+
+page: 페이지
+
+fonts:
+    fontFace: |
+        @font-face {
+            font-family: 'YESMyoungjo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'YESMyoungjo';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/YESMyoungjo-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+        }
+    serif: |
+        "YESMyoungjo", serif

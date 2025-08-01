@@ -1,0 +1,21 @@
+titles:
+    blogDefault: Untitled
+    postDefault: Untitled
+    archive: Archive
+    posts: Posts
+    tags: Tags
+    categories: Categories
+    home: Home
+    categoryDefault: No Category
+
+footer:
+    poweredByHexo: Powerd by <a href="https://hexo.io/">Hexo</a>
+    themeBySunnybyeon: <a href="https://github.com/sunnybyeon/hexo-theme-dashed">Theme</a> by <a href="https://github.com/sunnybyeon">sunnybyeon</a>
+
+page: Page
+
+fonts:
+    fontFace: |
+        @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    serif: |
+        "PT Serif", "Times New Roman", "Noto Serif", serif

@@ -2,7 +2,7 @@
     <header>
         <h1>
             <% if (page.link) { %><a href="<%- page.link %>"><% } %>
-                <%= page.title || "Untitled" %>
+                <%= page.title || __("titles.postDefault") %>
             <% if (page.link) { %></a><% } %>
         </h1>
         <div><time><%= page.date.format(config.date_format) %></time></div>

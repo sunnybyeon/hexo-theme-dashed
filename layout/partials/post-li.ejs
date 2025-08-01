@@ -16,7 +16,7 @@
                             <a href="<%= url_for(category.path) %>"
                                 ><%= category.name %></a>
                         <% } else { %>
-                            <%= config.default_category || "No Category" %>
+                            <%= config.default_category || __("titles.categoryDefault") %>
                         <% } %>
                     <% }) %>
                 </span>
@@ -27,6 +27,6 @@
         </span>
     <% } %>
     <a class="post-title" href="<%- url_for(post.path) %>"
-        ><div><span><%= post.title || "Untitled" %></span></div></a
+        ><div><span><%= post.title || __("titles.postDefault") %></span></div></a
     >
 </li>
