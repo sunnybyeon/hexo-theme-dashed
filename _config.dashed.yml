@@ -15,3 +15,4 @@ header_menu:
     Archives: /archives
 
 do_not_show_parent_category: true
+show_description: true
