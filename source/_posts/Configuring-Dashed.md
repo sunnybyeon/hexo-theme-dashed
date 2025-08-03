@@ -92,3 +92,13 @@ do_not_show_parent_category: true
         color: #4d4d4d;
     }
 </style>
+
+## Show Description on the home page
+
+_Added in `v1.5.0`._
+
+Whether or not to show the blog description (set on the hexo config file) on the home page. Defaults to `false`.
+
+```YAML _config.dashed.yml
+show_description: false
+```
