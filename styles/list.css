@@ -43,7 +43,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.posts-list li span.side-info span.category-separator:last-child::before {
+.posts-list li span.side-info > span.category-separator::before {
   content: "\00a0";
 }
 .posts-list li a.post-title {

@@ -1,10 +1,19 @@
 body {
   width: 450px;
 }
-img {
+main img {
   width: 100%;
   display: block;
 }
-.theme-list li a {
+main p::before {
+  content: "\2015";
+  color: #4d4d4d;
+  margin-right: 0.75ch;
+}
+main p {
+  margin: -0.45rem 0 0.5rem;
+  color: #808080;
+}
+main .theme-list li a {
   font-size: 1.1rem;
 }
